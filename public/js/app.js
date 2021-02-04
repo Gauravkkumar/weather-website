@@ -1,6 +1,3 @@
-console.log("App.js Client side")
-
-
 
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
@@ -19,12 +16,9 @@ weatherForm.addEventListener('submit', (e) => {
         response.json().then((data) => {
             if (data.error) {
                 messageone.textContent = data.error
-                console.log(data.error)
             } else {
                 messageone.textContent = data.location
                 messagetwo.textContent = data.forecastData
-                console.log(data.location)
-                console.log(data.forecastData)
             }
         })
     })
